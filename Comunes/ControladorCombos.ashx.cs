@@ -25,6 +25,11 @@ namespace TallerDeAutos.Comunes
             switch (vCombo.Comando.ToUpper())
             {
 
+
+                case "MARCAREPUESTO":
+                    Respuesta = LlenarCombo(vCombo, "MarcaRepuesto_LlenarCombo");
+                    break;
+
                 case "TIPODOCUMENTO":
                     Respuesta = LlenarCombo(vCombo, "TipoDocumento_LlenarCombo");
                     break;

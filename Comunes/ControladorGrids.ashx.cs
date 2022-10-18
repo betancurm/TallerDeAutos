@@ -26,6 +26,10 @@ namespace TallerDeAutos.Comunes
 
             switch (oGrid.Comando)
             {
+
+                case "TablaRepuestos":
+                  Respuesta = LlenarGrid(oGrid, "Repuesto_LlenarGrid");
+                    break;
                 case "Clientes":
                     Respuesta = LlenarGrid(oGrid, "Cliente_LlenarGrid");
                     break;
