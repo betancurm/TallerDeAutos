@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Charts</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <!--<i class="fas fa-laugh-wink"></i>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                        <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16">
+                        <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z" />
+                        <path fill-rule="evenodd" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z" />
+                    </svg>
+                </div>
+                <div class="sidebar-brand-text mx-3" style="color:yellow">TALLER J&J</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span style="color:yellow">INICIO</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item active">
+                <a class="nav-link" href="charts.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-nut" viewBox="0 0 16 16">
+                        <path d="m11.42 2 3.428 6-3.428 6H4.58L1.152 8 4.58 2h6.84zM4.58 1a1 1 0 0 0-.868.504l-3.428 6a1 1 0 0 0 0 .992l3.428 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.429-6a1 1 0 0 0 0-.992l-3.429-6A1 1 0 0 0 11.42 1H4.58z" />
+                        <path d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33 2.5 2.5 0 0 0-2.5-4.33zm-1.78 3.915a3.5 3.5 0 1 1 6.061-3.5 3.5 3.5 0 0 1-6.062 3.5z" />
+                    </svg>
+                    <span style="color:yellow">Repuestos</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+                    </svg>
+                    <span style="color:yellow">Clientes</spanstyle="color:yellow">
+                </a>
+            </li>
+
+
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row"style="color:black">
+                            <!-- left column -->
+                            <div class="col-md-12">
+                                <!-- general form elements -->
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">GESTIÓN DE REPUESTOS</h3>
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <!-- form start -->
+                                    <form id="frmRegistroCliente">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="cboMarcaRepuesto">Marca del Repuesto</label>
+                                                        <select id="cboMarcaRepuesto" class="form-control select2" style="width: 100%;">
+                                                            <option value="0">Seleccione una marca del repuesto</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="txtIdRepuesto">Id Repuesto</label>
+                                                        <input type="text" class="form-control" id="txtIdRepuesto" placeholder="Id Repuesto" value="0">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="txtRefRepuesto">Referencia del Repuesto</label>
+                                                        <input type="text" class="form-control" id="txtRefRepuesto" placeholder="Ref Repuesto" value="0">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtNombreRepuesto">Nombre del Repuesto</label>
+                                                        <input type="text" class="form-control" id="txtNombreRepuesto" placeholder="Nombre del repuesto">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label for="txtValorUnitario">Valor Unitario</label>
+                                                        <input type="number" class="form-control" id="txtValorUnitario" placeholder="Valor Unitario" value="0">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="txtDescripcion">Descripción</label>
+                                                        <textarea id="txtDescripcion" class="form-control" rows="2" placeholder="Descripción del repuesto"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row" >
+                                            <div class="col-md-3">
+                                                <button type="button" id="btnInsertar" class="btn-block btn-lg btn-dark" style="color:yellow">Insertar</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-dark"style="color:yellow">Consultar</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-dark"style="color:yellow">Actualizar</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" id="btnEliminar" class="btn-block btn-lg btn-danger">Eliminar</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="card shadow mb-4"style="color:black">
+                                            <div class="card-header py-3">
+                                                <h6 class="m-0 font-weight-bold text-dark">Repuestos Disponibles</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table id="tblRepuesto" class="table table-bordered" id="dataTable" width="100%" cellspacing="0"style="color:black">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Id_Repuesto</th>
+                                                                <th>Marca_Repuesto</th>
+                                                                <th>Referencia</th>
+                                                                <th>Nombre</th>
+                                                                <th>Valor_Unitario</th>
+                                                                <th>Descripción</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="table-personal">
+        <div class="row">
+            <div id="dvTabla">
+                <table id="tblRepuesto" class="display">
+                    <thead>
+                        <tr>
+                            <th>Id_Repuesto</th>
+                            <th>Marca_Repuesto</th>
+                            <th>Referencia</th>
+                            <th>Nombre</th>
+                            <th>Valor_Unitario</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>-->
+                                        <!-- /.card-body -->
+                                        <div class="card-footer">
+                                            <div id="dvMensaje" class=""></div>
+                                        </div>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </section>
+
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+
+    </div>
+    <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of 
+        Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/chart-bar-demo.js"></script>
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="../Comunes/Combos.js"></script>
+    <script src="../Comunes/Grids.js"></script>
+    <script src="../Paginas/Scripts/Repuesto.js"></script>
+
+</body>
+
+</html>

@@ -98,10 +98,13 @@ namespace TallerDeAutos.Clases
                     //Primero hay que poner a leer el reader
                     oConexion.Reader.Read();
                     //Hay información y se captura
-                    repuesto.Nombre = oConexion.Reader.GetString(0);
-                    repuesto.Descripcion = oConexion.Reader.GetString(1);
-                    repuesto.ValorUnitario = oConexion.Reader.GetInt32(3);
-                    //repuesto.MarcaRepuesto = oConexion.Reader.GetInt32(4);
+                    repuesto.MarcaRepuesto = oConexion.Reader.GetInt32(0);
+                    repuesto.IdRepuesto = oConexion.Reader.GetInt32(1);
+                    repuesto.Referencia = oConexion.Reader.GetString(2);
+                    repuesto.Nombre = oConexion.Reader.GetString(3);
+                    repuesto.ValorUnitario = oConexion.Reader.GetFloat(4);
+                    repuesto.Descripcion = oConexion.Reader.GetString(5);
+
                     return true;
                 }
                 else

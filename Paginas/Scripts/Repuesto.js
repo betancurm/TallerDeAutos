@@ -68,12 +68,12 @@ function ProcesarComandos(Comando) {
             }
             else {
                 let infoRepuesto = JSON.parse(RptaRepuestos);
-               // $("#txtIdRepuesto").val(infoRepuesto.IdRepuesto);
+                $("#txtIdRepuesto").val(infoRepuesto.IdRepuesto);
                 $("#txtRefRepuesto").val(infoRepuesto.Referencia);
                 $("#txtNombreRepuesto").val(infoRepuesto.Nombre);
                 $("#txtDescripcion").val(infoRepuesto.Descripcion);
                 $("#txtValorUnitario").val(infoRepuesto.ValorUnitario);
-                //$("#cboMarcaRepuesto").val(infoRepuesto.MarcaRepuesto);
+                $("#cboMarcaRepuesto").val(infoRepuesto.MarcaRepuesto);
             }
         },
         error: function (RespuestaError) {
