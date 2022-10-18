@@ -22,50 +22,55 @@ $(document).ready(function () {
 function LlenarGridRecepciones() {
     LlenarGridControlador("../Comunes/ControladorGrids.ashx", "TablaRecepciones", null, "#tblRecepciones");
 }
-//function ProcesarComandos(Comando) {
-//    var Departamento = $("#cboDepartamento").val();
-//    var Codigo = $("#txtCodigo").val();
-//    if (Comando == "Insertar") { Codigo = 0; }
-//    var Nombre = $("#txtCiudad").val();
-//    var Activo = $("#chkActivo").prop('checked');
+function ProcesarComandos(Comando) {
+    var IdRecepcion = $("#txtIdRecepcion").val();
+    if (Comando == "Insertar") { IdRecepcion = 0; }
+    var IdCliente = $("#cboCliente").val();
+    var CambioAceite = $("#chkAceiteActivo").prop('checked');
+    var FechaIngreso = $("#txtFechaIngreso").val();
+    var FechaSalida = $("#txtFechaSalida").val();
+    var DescripcionRecepcion = $("#txtDescripcionRecepcion").val();
 
-//    var DatosCiudad = {
-//        Codigo: Codigo,
-//        Nombre: Nombre,
-//        Activo: Activo,
-//        CodigoDepartamento: Departamento,
-//        Comando: Comando
-//    }
-//    $.ajax({
-//        //Función Ajax
-//        type: "POST",
-//        url: "../Controladores/ControladorCiudad.ashx",
-//        contentType: "json",
-//        data: JSON.stringify(DatosCiudad),
-//        success: function (RptaCiudad) {
-//            if (Comando != "Consultar") {
-//                //Hay que procesar la respuesta para identificar si hay un error
-//                $("#dvMensaje").addClass("alert alert-success");
-//                $("#dvMensaje").html(RptaCiudad);
-//                LlenarGridCiudades();
-//            }
-//            else {
-//                let InfoCiudad = JSON.parse(RptaCiudad);
-//                $("#txtCodigo").val(InfoCiudad.Codigo);
-//                $("#txtCiudad").val(InfoCiudad.Nombre);
-//                $("#cboPais").val(InfoCiudad.CodigoPais);
-//                let Departamento = InfoCiudad.CodigoDepartamento;
-//                //Llenar el combo de departamento
-//                LlenarComboDepartamento(Departamento);
-//                $("#chkActivo").prop('checked', InfoCiudad.Activo);
-//            }
-//        },
-//        error: function (RespuestaError) {
-//            $("#dvMensaje").addClass("alert alert-danger");
-//            $("#dvMensaje").html(RespuestaError);
-//        }
-//    });
-//}
+    var DatosRecepcionVehiculo = {
+        IdRecepcion: IdRecepcion,
+        IdCliente: IdCliente,
+        CambioAceite: CambioAceite,
+        FechaIngreso: FechaIngreso,
+        FechaSalida: FechaSalida,
+        DescripcionRecepcion: DescripcionRecepcion,
+        Comando: Comando
+    }
+    $.ajax({
+        //Función Ajax
+        type: "POST",
+        url: "../Controladores/ControladorRecepcionVehiculo.ashx",
+        contentType: "json",
+        data: JSON.stringify(DatosRecepcionVehiculo),
+        success: function (RptaRecepcionVehiculo) {
+            if (Comando != "Consultar") {
+                //Hay que procesar la respuesta para identificar si hay un error
+                $("#dvMensaje").addClass("alert alert-success");
+                $("#dvMensaje").html(RptaRecepcionVehiculo);
+                LlenarGridRecepciones();
+            }
+            else {
+                let InfoRptaRecepcionVehiculo = JSON.parse(RptaRecepcionVehiculo);
+                $("#txtIdRecepcion").val(InfoRptaRecepcionVehiculo.IdRecepcion);
+                //$("#cboVehiculo").val(InfoRptaRecepcionVehiculo.CodigoVehiculo);
+                //$("#txtFechaIngreso").val(InfoRptaRecepcionVehiculo.FechaIngreso);
+                //$("#txtFechaSalida").val(InfoRptaRecepcionVehiculo.FechaSalida);
+                $("#txtDescripcionRecepcion").val(InfoRptaRecepcionVehiculo.DescripcionRecepcion);
+                //let Cliente = InfoRptaRecepcionVehiculo.IdCliente;
+                //LlenarComboCliente(Cliente);
+                $("#chkAceiteActivo").prop('checked', InfoRptaRecepcionVehiculo.CambioAceite);
+            }
+        },
+        error: function (RespuestaError) {
+            $("#dvMensaje").addClass("alert alert-danger");
+            $("#dvMensaje").html(RespuestaError);
+        }
+    });
+}
 function LlenarComboCliente() {
     var promise = LlenarComboControlador("../Comunes/ControladorCombos.ashx", "CLIENTE", null, "#cboCliente");
 
