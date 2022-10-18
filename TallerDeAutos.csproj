@@ -136,6 +136,7 @@
     <Content Include="Paginas\Estilos\dataTables.bootstrap4.css" />
     <Content Include="Paginas\Estilos\dataTables.bootstrap4.min.css" />
     <Content Include="Paginas\Estilos\dataTables.min.css" />
+    <Content Include="Paginas\img\Fondo.png" />
     <Content Include="Paginas\Repuesto.html" />
     <Content Include="Paginas\Scripts\Cliente.js" />
     <Content Include="Paginas\Scripts\Repuesto.js" />
