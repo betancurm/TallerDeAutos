@@ -26,11 +26,15 @@ namespace TallerDeAutos.Comunes
 
             switch (oGrid.Comando)
             {
-                //case "Repuestos":
-                //    Respuesta = LlenarGrid(oGrid, "Repuesto_LlenarGrid");
-                //    break;
+
                 case "TablaRepuestos":
                   Respuesta = LlenarGrid(oGrid, "Repuesto_LlenarGrid");
+                    break;
+                case "Clientes":
+                    Respuesta = LlenarGrid(oGrid, "Cliente_LlenarGrid");
+                    break;
+                case "TablaRecepciones":
+                    Respuesta = LlenarGrid(oGrid, "RecepcionVehiculo_LlenarGrid");
                     break;
                 //default:
                 //    Respuesta = "Sin definir";

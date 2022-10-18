@@ -10,20 +10,21 @@ using TallerDeAutos.Modelos;
 namespace TallerDeAutos.Controladores
 {
     /// <summary>
-    /// Summary description for ControladorCliente
+    /// Summary description for ControladorRecepcionVehiculo
     /// </summary>
-    public class ControladorCliente : IHttpHandler
+    public class ControladorRecepcionVehiculo : IHttpHandler
     {
+
         public void ProcessRequest(HttpContext context)
         {
             try
             {
-                string DatosCliente;
+                string DatosRecepcionVehiculo;
                 StreamReader reader = new StreamReader(context.Request.InputStream);
-                DatosCliente = reader.ReadToEnd();
-                Cliente cliente = JsonConvert.DeserializeObject<Cliente>(DatosCliente);
+                DatosRecepcionVehiculo = reader.ReadToEnd();
+                RecepcionVehiculo recepcion = JsonConvert.DeserializeObject<RecepcionVehiculo>(DatosRecepcionVehiculo);
 
-                context.Response.Write(ProcesarComando(cliente));
+                context.Response.Write(ProcesarComando(recepcion));
             }
             catch (Exception ex)
             {
@@ -31,29 +32,30 @@ namespace TallerDeAutos.Controladores
             }
         }
 
-        private string ProcesarComando(Cliente cliente)
+        private string ProcesarComando(RecepcionVehiculo recepcion)
         {
-            clsCliente oCliente = new clsCliente();
-            oCliente.cliente = cliente;
-            switch (cliente.Comando.ToUpper())
+            clsRecepcionVehiculo oRecepcion = new clsRecepcionVehiculo();
+            oRecepcion.recepcion = recepcion;
+            switch (recepcion.Comando.ToUpper())
             {
                 case "INSERTAR":
-                    return oCliente.Insertar();
-              
+                    return oRecepcion.Insertar();
+
                 case "ACTUALIZAR":
-                    return oCliente.Actualizar();
+                    return oRecepcion.Actualizar();
+                    
                 case "CONSULTAR":
-                    if (oCliente.Consultar())
+                    if (oRecepcion.Consultar())
                     {
-                        return JsonConvert.SerializeObject(oCliente.cliente);
+                        return JsonConvert.SerializeObject(oRecepcion.recepcion);
                     }
                     else
                     {
-                        return oCliente.cliente.Error;
+                        return oRecepcion.recepcion.Error;
                     }
 
                 case "ELIMINAR":
-                    return oCliente.Eliminar();
+                    return oRecepcion.Eliminar();
 
                 default:
                     return "Comando no encontrado";
