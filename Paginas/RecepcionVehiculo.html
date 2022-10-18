@@ -28,73 +28,53 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form id="frmRegistroCliente">
+                        <form id="frmRegistroVehiculo">
                             <div class="card-body">
                                 <div class="row">
-
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label for="txtNombreCliente">Nombre</label>
-                                            <input type="text" class="form-control" id="txtNombreCliente" placeholder="Nombre">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="txtPrimerApellidoCliente">Primer Apellido</label>
-                                            <input type="text" class="form-control" id="txtPrimerApellidoCliente" placeholder="Primer apellido">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="txtSegundoApellidoCliente">Segundo Apellido</label>
-                                            <input type="text" class="form-control" id="txtSegundoApellidoCliente" placeholder="Segundo apellido">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="cboTipoDocumentoCliente">Tipo Documento</label>
-                                            <select id="cboTipoDocumentoCliente" class="form-control select2" style="width: 100%;">
-                                                <option value="0">Seleccione un tipo de Documento</option>
+                                            <label for="cboCliente">Cliente</label>
+                                            <select id="cboCliente" class="form-control select2" style="width: 100%;" onchange="LlenarComboVehiculo(0)">
+                                                <option value="0">Seleccione un Cliente</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label for="txtDocumentoCliente">Documento</label>
-                                            <input type="text" class="form-control" id="txtDocumentoCliente" placeholder="Documento">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="txtTelefonoCliente">Telefono</label>
-                                            <input type="text" class="form-control" id="txtTelefonoCliente" placeholder="Telefono">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="txtCorreoCliente">Correo</label>
-                                            <input type="text" class="form-control" id="txtCorreoCliente" placeholder="Correo">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="txtIdCliente">Id Cliente</label>
-                                            <input type="number" class="form-control" id="txtIdCliente" placeholder="Id Cliente">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label for="cboMarcaVehiculo">Marca del Vehiculo</label>
-                                            <select id="cboMarcaVehiculo" class="form-control select2" style="width: 100%;">
-                                                <option value="0">Seleccione un tipo de Documento</option>
+                                            <label for="cboVehiculo">Vehiculo</label>
+                                            <select id="cboVehiculo" class="form-control select2" style="width: 100%;">
+                                                <option value="Seleccione el Vehiculo">Seleccione el Vehiculo</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label for="txtPlacaVehiculo">Placa</label>
-                                            <input type="text" class="form-control" id="txtPlacaVehiculo" placeholder="Placa del Vehiculo">
+                                            <center><label for="chkAceiteActivo">Cambio de Aceite</label></center>
+                                            <input type="checkbox" class="form-control" id="chkAceiteActivo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtIdRecepcion">Id</label>
+                                            <input type="text" class="form-control" id="txtIdRecepcion" placeholder="Id de la recepcion">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtFechaIngreso">Fecha Ingreso</label>
+                                            <input type="date" class="form-control" id="txtFechaIngreso" placeholder="Fecha Ingreso">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtFechaSalida">Fecha Salida</label>
+                                            <input type="date" class="form-control" id="txtFechaSalida" placeholder="Fecha Salida">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="txtDescripcionRecepcion">Descripción </label>
+                                            <textarea id="txtDescripcionRecepcion" class="form-control" rows="2" placeholder="Descripción de daños"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +96,7 @@
                             <br />
                             <div class="row">
                                 <div id="dvTabla">
-                                    <table id="tblClientes" class="display" style="width: auto">
+                                    <table id="tblRecepciones" class="display" style="width: auto">
                                         <thead>
                                             <tr>
                                                 <!--<th>Id</th>
@@ -151,7 +131,7 @@
     <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
     <script src="../Comunes/Combos.js"></script>
     <script src="../Comunes/Grids.js"></script>
-    <script src="Scripts/Cliente.js"></script>
+    <script src="Scripts/RecepcionVehiculo.js"></script>
     <!-- /.card -->
 </body>
 </html>
