@@ -45,7 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="libComunes">
-      <HintPath>..\..\..\Documents\Proyects\libComunes\bin\Debug\libComunes.dll</HintPath>
+      <HintPath>..\libComunes\bin\Debug\libComunes.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -136,7 +136,9 @@
     <Content Include="Paginas\Estilos\dataTables.bootstrap4.css" />
     <Content Include="Paginas\Estilos\dataTables.bootstrap4.min.css" />
     <Content Include="Paginas\Estilos\dataTables.min.css" />
+    <Content Include="Paginas\Repuesto.html" />
     <Content Include="Paginas\Scripts\Cliente.js" />
+    <Content Include="Paginas\Scripts\Repuesto.js" />
     <Content Include="Scripts\adminlte.js.map" />
     <Content Include="Scripts\adminlte.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
@@ -144,6 +146,7 @@
     <Content Include="Comunes\ControladorCombos.ashx" />
     <Content Include="Comunes\ControladorGrids.ashx" />
     <Content Include="Controladores\ControladorCliente.ashx" />
+    <Content Include="Controladores\ControladorRepuesto.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\adminlte.js" />
     <Content Include="Scripts\adminlte.min.js" />
@@ -201,6 +204,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Clases\clsCliente.cs" />
+    <Compile Include="Clases\clsRepuesto.cs" />
     <Compile Include="Comunes\ControladorCombos.ashx.cs">
       <DependentUpon>ControladorCombos.ashx</DependentUpon>
     </Compile>
@@ -217,6 +221,9 @@
     <Compile Include="Controladores\ControladorCliente.ashx.cs">
       <DependentUpon>ControladorCliente.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Controladores\ControladorRepuesto.ashx.cs">
+      <DependentUpon>ControladorRepuesto.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +235,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Cliente.cs" />
+    <Compile Include="Modelos\Repuesto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
