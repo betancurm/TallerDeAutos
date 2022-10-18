@@ -129,12 +129,21 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Paginas\Cliente.html" />
+    <Content Include="Paginas\Estilos\adminlte.css" />
+    <Content Include="Paginas\Estilos\adminlte.min.css" />
+    <Content Include="Paginas\Estilos\all.min.css" />
+    <Content Include="Paginas\Estilos\dataTables.bootstrap4.css" />
+    <Content Include="Paginas\Estilos\dataTables.bootstrap4.min.css" />
+    <Content Include="Paginas\Estilos\dataTables.min.css" />
+    <Content Include="Paginas\Scripts\Cliente.js" />
     <Content Include="Scripts\adminlte.js.map" />
     <Content Include="Scripts\adminlte.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Comunes\ControladorCombos.ashx" />
     <Content Include="Comunes\ControladorGrids.ashx" />
+    <Content Include="Controladores\ControladorCliente.ashx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\adminlte.js" />
     <Content Include="Scripts\adminlte.min.js" />
@@ -191,6 +200,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\clsCliente.cs" />
     <Compile Include="Comunes\ControladorCombos.ashx.cs">
       <DependentUpon>ControladorCombos.ashx</DependentUpon>
     </Compile>
@@ -203,6 +213,9 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controladores\ControladorCliente.ashx.cs">
+      <DependentUpon>ControladorCliente.ashx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -240,10 +253,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Clases\" />
-    <Folder Include="Controladores\" />
-    <Folder Include="Paginas\Estilos\" />
-    <Folder Include="Paginas\Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
