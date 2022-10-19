@@ -9,17 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Charts</title>
+    <title>SB Admin 2 - Tables</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -57,7 +58,7 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Repuestos -->
+            <!-- Nav Item - Charts -->
             <li class="nav-item active">
                 <a class="nav-link" href="charts.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-nut" viewBox="0 0 16 16">
@@ -68,16 +69,15 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Clientes -->
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="Clientes.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
                     </svg>
                     <span style="color:yellow">Clientes</span style="color:yellow">
                 </a>
             </li>
-
             <!-- Nav Item - Recepción vehículo -->
             <li class="nav-item">
                 <a class="nav-link" href="register.html">
@@ -105,120 +105,133 @@
 
                 <section class="content">
                     <div class="container-fluid">
-                        <div class="row"style="color:black">
+                        <div class="row" style="color:black">
                             <!-- left column -->
                             <div class="col-md-12">
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">GESTIÓN DE REPUESTOS</h3>
+                                        <h3 class="card-title">GESTIÓN DE CLIENTES</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     <!-- form start -->
                                     <form id="frmRegistroCliente">
                                         <div class="card-body">
                                             <div class="row">
+
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="cboMarcaRepuesto">Marca del Repuesto</label>
-                                                        <select id="cboMarcaRepuesto" class="form-control select2" style="width: 100%;">
-                                                            <option value="0">Seleccione una marca del repuesto</option>
+                                                        <label for="txtNombreCliente">Nombre</label>
+                                                        <input type="text" class="form-control" id="txtNombreCliente" placeholder="Nombre">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtPrimerApellidoCliente">Primer Apellido</label>
+                                                        <input type="text" class="form-control" id="txtPrimerApellidoCliente" placeholder="Primer apellido">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtSegundoApellidoCliente">Segundo Apellido</label>
+                                                        <input type="text" class="form-control" id="txtSegundoApellidoCliente" placeholder="Segundo apellido">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="cboTipoDocumentoCliente">Tipo Documento</label>
+                                                        <select id="cboTipoDocumentoCliente" class="form-control select2" style="width: 100%;">
+                                                            <option value="0">Seleccione un tipo de Documento</option>
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtIdRepuesto">Id Repuesto</label>
-                                                        <input type="text" class="form-control" id="txtIdRepuesto" placeholder="Id Repuesto" value="0">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="txtRefRepuesto">Referencia del Repuesto</label>
-                                                        <input type="text" class="form-control" id="txtRefRepuesto" placeholder="Ref Repuesto" value="0">
+                                                        <label for="txtDocumentoCliente">Documento</label>
+                                                        <input type="text" class="form-control" id="txtDocumentoCliente" placeholder="Documento">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtNombreRepuesto">Nombre del Repuesto</label>
-                                                        <input type="text" class="form-control" id="txtNombreRepuesto" placeholder="Nombre del repuesto">
+                                                        <label for="txtTelefonoCliente">Telefono</label>
+                                                        <input type="text" class="form-control" id="txtTelefonoCliente" placeholder="Telefono">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtValorUnitario">Valor Unitario</label>
-                                                        <input type="number" class="form-control" id="txtValorUnitario" placeholder="Valor Unitario" value="0">
-
+                                                        <label for="txtCorreoCliente">Correo</label>
+                                                        <input type="text" class="form-control" id="txtCorreoCliente" placeholder="Correo">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtDescripcion">Descripción</label>
-                                                        <textarea id="txtDescripcion" class="form-control" rows="2" placeholder="Descripción del repuesto"></textarea>
+                                                        <label for="txtIdCliente">Id Cliente</label>
+                                                        <input type="number" class="form-control" id="txtIdCliente" placeholder="Id Cliente">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="cboMarcaVehiculo">Marca del Vehiculo</label>
+                                                        <select id="cboMarcaVehiculo" class="form-control select2" style="width: 100%;">
+                                                            <option value="0">Seleccione un tipo de Documento</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtPlacaVehiculo">Placa</label>
+                                                        <input type="text" class="form-control" id="txtPlacaVehiculo" placeholder="Placa del Vehiculo">
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
-                                        <div class="row" >
+                                        <div class="row">
                                             <div class="col-md-3">
                                                 <button type="button" id="btnInsertar" class="btn-block btn-lg btn-dark" style="color:yellow">Insertar</button>
                                             </div>
                                             <div class="col-md-3">
-                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-dark"style="color:yellow">Consultar</button>
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-dark" style="color:yellow">Consultar</button>
                                             </div>
                                             <div class="col-md-3">
-                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-dark"style="color:yellow">Actualizar</button>
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-dark" style="color:yellow">Actualizar</button>
                                             </div>
                                             <div class="col-md-3">
                                                 <button type="button" id="btnEliminar" class="btn-block btn-lg btn-danger">Eliminar</button>
                                             </div>
                                         </div>
                                         <br />
-                                        <div class="card shadow mb-4"style="color:black">
+                                        <div class="card shadow mb-4" style="color:black">
                                             <div class="card-header py-3">
-                                                <h6 class="m-0 font-weight-bold text-dark">Repuestos Disponibles</h6>
+                                                <h6 class="m-0 font-weight-bold text-dark">Clientes en el sistema</h6>
                                             </div>
                                             <div class="card-body">
                                                 <div class="table-responsive">
-                                                    <table id="tblRepuesto" class="table table-bordered" id="dataTable" width="100%" cellspacing="0"style="color:black">
+                                                    <table id="tblClientes" class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="color:black">
                                                         <thead>
                                                             <tr>
-                                                                <th>Id_Repuesto</th>
-                                                                <th>Marca_Repuesto</th>
-                                                                <th>Referencia</th>
+                                                                <th>Id</th>
                                                                 <th>Nombre</th>
-                                                                <th>Valor_Unitario</th>
-                                                                <th>Descripción</th>
+                                                                <th>Primer Apellido</th>
+                                                                <th>Segundo Apellido</th>
+                                                                <th>Documento</th>
+                                                                <th>Tipo de Documento</th>
+                                                                <th>Telefono</th>
+                                                                <th>Correo</th>
+                                                                <th>Marca Vehiculo</th>
+                                                                <th>Placa Vehiculo</th>
                                                             </tr>
                                                         </thead>
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--<div class="table-personal">
-        <div class="row">
-            <div id="dvTabla">
-                <table id="tblRepuesto" class="display">
-                    <thead>
-                        <tr>
-                            <th>Id_Repuesto</th>
-                            <th>Marca_Repuesto</th>
-                            <th>Referencia</th>
-                            <th>Nombre</th>
-                            <th>Valor_Unitario</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-    </div>-->
-                                        <!-- /.card-body -->
-                                        <div class="card-footer">
-                                            <div id="dvMensaje" class=""></div>
-                                        </div>
-                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <div id="dvMensaje" class=""></div>
+                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -250,13 +263,13 @@
             <!-- /.container-fluid -->
 
         </div>
-        <!-- End of Main Content -->
+            <!-- End of Main Content -->
 
 
+        </div>
+        <!-- End of Content Wrapper -->
     </div>
-    <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of 
+    <!-- End of
         Wrapper -->
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -288,8 +301,8 @@
     <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
     <script src="../Comunes/Combos.js"></script>
     <script src="../Comunes/Grids.js"></script>
-    <script src="../Paginas/Scripts/Repuesto.js"></script>
-    
+    <script src="../Paginas/Scripts/Cliente.js"></script>
 </body>
+
 
 </html>

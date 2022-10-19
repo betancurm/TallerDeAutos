@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Charts</title>
+    <title>SB Admin 2 - Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
 
 </head>
 
@@ -57,7 +56,7 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Repuestos -->
+            <!-- Nav Item - Charts -->
             <li class="nav-item active">
                 <a class="nav-link" href="charts.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-nut" viewBox="0 0 16 16">
@@ -68,7 +67,7 @@
                 </a>
             </li>
 
-            <!-- Nav Item - Clientes -->
+            <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
@@ -77,7 +76,6 @@
                     <span style="color:yellow">Clientes</span style="color:yellow">
                 </a>
             </li>
-
             <!-- Nav Item - Recepción vehículo -->
             <li class="nav-item">
                 <a class="nav-link" href="register.html">
@@ -105,120 +103,113 @@
 
                 <section class="content">
                     <div class="container-fluid">
-                        <div class="row"style="color:black">
+                        <div class="row" style="color:black">
                             <!-- left column -->
                             <div class="col-md-12">
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">GESTIÓN DE REPUESTOS</h3>
+                                        <h3 class="card-title">GESTIÓN DE RECEPCIÓN DE VEHÍCULOS</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     <!-- form start -->
-                                    <form id="frmRegistroCliente">
+                                    <form id="frmRegistroVehiculo">
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="cboMarcaRepuesto">Marca del Repuesto</label>
-                                                        <select id="cboMarcaRepuesto" class="form-control select2" style="width: 100%;">
-                                                            <option value="0">Seleccione una marca del repuesto</option>
+                                                        <label for="cboCliente">Cliente</label>
+                                                        <select id="cboCliente" class="form-control select2" style="width: 100%;" onchange="LlenarComboVehiculo(0)">
+                                                            <option value="0">Seleccione un Cliente</option>
                                                         </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="txtIdRepuesto">Id Repuesto</label>
-                                                        <input type="text" class="form-control" id="txtIdRepuesto" placeholder="Id Repuesto" value="0">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <div class="form-group">
-                                                        <label for="txtRefRepuesto">Referencia del Repuesto</label>
-                                                        <input type="text" class="form-control" id="txtRefRepuesto" placeholder="Ref Repuesto" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtNombreRepuesto">Nombre del Repuesto</label>
-                                                        <input type="text" class="form-control" id="txtNombreRepuesto" placeholder="Nombre del repuesto">
+                                                        <label for="cboVehiculo">Vehiculo</label>
+                                                        <select id="cboVehiculo" class="form-control select2" style="width: 100%;">
+                                                            <option value="Seleccione el Vehiculo">Seleccione el Vehiculo</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-2">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtValorUnitario">Valor Unitario</label>
-                                                        <input type="number" class="form-control" id="txtValorUnitario" placeholder="Valor Unitario" value="0">
-
+                                                        <center><label for="chkAceiteActivo">Cambio de Aceite</label></center>
+                                                        <input type="checkbox" class="form-control" id="chkAceiteActivo">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtIdRecepcion">Id</label>
+                                                        <input type="text" class="form-control" id="txtIdRecepcion" placeholder="Id de la recepcion">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtFechaIngreso">Fecha Ingreso</label>
+                                                        <input type="date" class="form-control" id="txtFechaIngreso" placeholder="Fecha Ingreso">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="txtFechaSalida">Fecha Salida</label>
+                                                        <input type="date" class="form-control" id="txtFechaSalida" placeholder="Fecha Salida">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
-                                                        <label for="txtDescripcion">Descripción</label>
-                                                        <textarea id="txtDescripcion" class="form-control" rows="2" placeholder="Descripción del repuesto"></textarea>
+                                                        <label for="txtDescripcionRecepcion">Descripción </label>
+                                                        <textarea id="txtDescripcionRecepcion" class="form-control" rows="2" placeholder="Descripción de daños"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
-                                        <div class="row" >
+                                        <div class="row">
                                             <div class="col-md-3">
                                                 <button type="button" id="btnInsertar" class="btn-block btn-lg btn-dark" style="color:yellow">Insertar</button>
                                             </div>
                                             <div class="col-md-3">
-                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-dark"style="color:yellow">Consultar</button>
+                                                <button type="button" id="btnConsultar" class="btn-block btn-lg btn-dark" style="color:yellow">Consultar</button>
                                             </div>
                                             <div class="col-md-3">
-                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-dark"style="color:yellow">Actualizar</button>
+                                                <button type="button" id="btnActualizar" class="btn-block btn-lg btn-dark" style="color:yellow">Actualizar</button>
                                             </div>
                                             <div class="col-md-3">
                                                 <button type="button" id="btnEliminar" class="btn-block btn-lg btn-danger">Eliminar</button>
                                             </div>
                                         </div>
                                         <br />
-                                        <div class="card shadow mb-4"style="color:black">
+                                        <div class="card shadow mb-4" style="color:black">
                                             <div class="card-header py-3">
-                                                <h6 class="m-0 font-weight-bold text-dark">Repuestos Disponibles</h6>
+                                                <h6 class="m-0 font-weight-bold text-dark">Recepciones</h6>
                                             </div>
                                             <div class="card-body">
                                                 <div class="table-responsive">
-                                                    <table id="tblRepuesto" class="table table-bordered" id="dataTable" width="100%" cellspacing="0"style="color:black">
+                                                    <table id="tblRecepciones" class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="color:black">
                                                         <thead>
                                                             <tr>
-                                                                <th>Id_Repuesto</th>
-                                                                <th>Marca_Repuesto</th>
-                                                                <th>Referencia</th>
+                                                                <!--<th>Id</th>
                                                                 <th>Nombre</th>
-                                                                <th>Valor_Unitario</th>
-                                                                <th>Descripción</th>
+                                                                <th>Primer Apellido</th>
+                                                                <th>Segundo Apellido</th>
+                                                                <th>Documento</th>
+                                                                <th>Tipo de Documento</th>
+                                                                <th>Telefono</th>
+                                                                <th>Correo</th>
+                                                                <th>Marca Vehiculo</th>
+                                                                <th>Placa Vehiculo</th>-->
                                                             </tr>
                                                         </thead>
                                                     </table>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--<div class="table-personal">
-        <div class="row">
-            <div id="dvTabla">
-                <table id="tblRepuesto" class="display">
-                    <thead>
-                        <tr>
-                            <th>Id_Repuesto</th>
-                            <th>Marca_Repuesto</th>
-                            <th>Referencia</th>
-                            <th>Nombre</th>
-                            <th>Valor_Unitario</th>
-                            <th>Descripción</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-    </div>-->
-                                        <!-- /.card-body -->
-                                        <div class="card-footer">
-                                            <div id="dvMensaje" class=""></div>
-                                        </div>
-                                    </form>
+                                </div>
+                                <!-- /.card-body -->
+                                <div class="card-footer">
+                                    <div id="dvMensaje" class=""></div>
+                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -256,7 +247,7 @@
     </div>
     <!-- End of Content Wrapper -->
     </div>
-    <!-- End of 
+    <!-- End of
         Wrapper -->
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -288,8 +279,7 @@
     <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
     <script src="../Comunes/Combos.js"></script>
     <script src="../Comunes/Grids.js"></script>
-    <script src="../Paginas/Scripts/Repuesto.js"></script>
-    
-</body>
+    <script src="../Paginas/Scripts/RecepcionVehiculo.js"></script>
 
+</body>
 </html>
