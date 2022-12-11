@@ -194,9 +194,11 @@
     <Content Include="Site.Master" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\404.html" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\buttons.html" />
+    <Content Include="startbootstrap-sb-admin-2-gh-pages\Calificacion.html" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\charts.html" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\css\sb-admin-2.css" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\css\sb-admin-2.min.css" />
+    <Content Include="startbootstrap-sb-admin-2-gh-pages\Facturacion.html" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\gulpfile.js" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\img\undraw_posting_photo.svg" />
     <Content Include="startbootstrap-sb-admin-2-gh-pages\img\undraw_profile.svg" />

@@ -2,8 +2,7 @@
     var DatosGrid = {
         Comando: Comando,
         lstParametros
-    }
-
+    };
     var promise;
     promise = $.ajax({
         type: "POST",
@@ -29,4 +28,21 @@
         }
     });
     return promise;
+}
+
+function LlenarGridDatos(DatosJSON, TablaLlenar) {
+    var columns = [];
+    columnNames = Object.keys(DatosJSON[0]);
+    for (var i in columnNames) {
+        columns.push({
+            data: columnNames[i],
+            title: columnNames[i]
+        });
+    }
+
+    $(TablaLlenar).DataTable({
+        data: DatosJSON,
+        columns: columns,
+        destroy: true
+    });
 }
