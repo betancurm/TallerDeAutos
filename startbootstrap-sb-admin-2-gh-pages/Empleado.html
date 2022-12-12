@@ -71,7 +71,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="Clientes.html">
+                <a class="nav-link" href="Tables.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
                     </svg>
@@ -85,7 +85,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                         <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
                     </svg>
-                    <span style="color:yellow">Clientes</span>
+                    <span style="color:yellow">Empleados</span>
                 </a>
             </li>
             <!-- Nav Item - Recepción vehículo -->
@@ -141,7 +141,7 @@
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">GESTIÓN DE CLIENTES</h3>
+                                        <h3 class="card-title">GESTIÓN DE EMPLEADOS</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     <!-- form start -->
@@ -151,69 +151,56 @@
 
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtNombreCliente">Nombre</label>
-                                                        <input type="text" class="form-control" id="txtNombreCliente" placeholder="Nombre">
+                                                        <label for="txtNombreEmpleado">Nombre</label>
+                                                        <input type="text" class="form-control" id="txtNombreEmpleado" placeholder="Nombre">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtPrimerApellidoCliente">Primer Apellido</label>
-                                                        <input type="text" class="form-control" id="txtPrimerApellidoCliente" placeholder="Primer apellido">
+                                                        <label for="txtPrimerApellidoEmpleado">Primer Apellido</label>
+                                                        <input type="text" class="form-control" id="txtPrimerApellidoEmpleado" placeholder="Primer apellido">
                                                     </div>
                                                 </div>
 
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtSegundoApellidoCliente">Segundo Apellido</label>
-                                                        <input type="text" class="form-control" id="txtSegundoApellidoCliente" placeholder="Segundo apellido">
+                                                        <label for="txtSegundoApellidoEmpleado">Segundo Apellido</label>
+                                                        <input type="text" class="form-control" id="txtSegundoApellidoEmpleado" placeholder="Segundo apellido">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="cboTipoDocumentoCliente">Tipo Documento</label>
-                                                        <select id="cboTipoDocumentoCliente" class="form-control select2" style="width: 100%;">
+                                                        <label for="cboTipoDocumentoEmpleado">Tipo Documento</label>
+                                                        <select id="cboTipoDocumentoEmpleado" class="form-control select2" style="width: 100%;">
                                                             <option value="0">Seleccione un tipo de Documento</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtDocumentoCliente">Documento</label>
-                                                        <input type="text" class="form-control" id="txtDocumentoCliente" placeholder="Documento">
+                                                        <label for="txtDocumentoEmpleado">Documento</label>
+                                                        <input type="text" class="form-control" id="txtDocumentoEmpleado" placeholder="Documento">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtTelefonoCliente">Telefono</label>
-                                                        <input type="text" class="form-control" id="txtTelefonoCliente" placeholder="Telefono">
+                                                        <label for="txtTelefonoEmpleado">Telefono</label>
+                                                        <input type="text" class="form-control" id="txtTelefonoEmpleado" placeholder="Telefono">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtCorreoCliente">Correo</label>
-                                                        <input type="text" class="form-control" id="txtCorreoCliente" placeholder="Correo">
+                                                        <label for="txtDireccionEmpleado">Dirección</label>
+                                                        <input type="text" class="form-control" id="txtDireccionEmpleado" placeholder="Dirección">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="txtIdCliente">Id Cliente</label>
-                                                        <input type="number" class="form-control" id="txtIdCliente" placeholder="Id Cliente">
+                                                        <label for="txtIdEmpleado">Id Empleado</label>
+                                                        <input type="number" class="form-control" id="txtIdEmpleado" placeholder="Id Empleado">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="cboMarcaVehiculo">Marca del Vehiculo</label>
-                                                        <select id="cboMarcaVehiculo" class="form-control select2" style="width: 100%;">
-                                                            <option value="0">Seleccione un tipo de Documento</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label for="txtPlacaVehiculo">Placa</label>
-                                                        <input type="text" class="form-control" id="txtPlacaVehiculo" placeholder="Placa del Vehiculo">
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="row">
@@ -233,7 +220,7 @@
                                         <br />
                                         <div class="card shadow mb-4" style="color:black">
                                             <div class="card-header py-3">
-                                                <h6 class="m-0 font-weight-bold text-dark">Clientes en el sistema</h6>
+                                                <h6 class="m-0 font-weight-bold text-dark">Empleados en el sistema</h6>
                                             </div>
                                             <div class="card-body">
                                                 <div class="table-responsive">
@@ -247,9 +234,7 @@
                                                                 <th>Documento</th>
                                                                 <th>Tipo de Documento</th>
                                                                 <th>Telefono</th>
-                                                                <th>Correo</th>
-                                                                <th>Marca Vehiculo</th>
-                                                                <th>Placa Vehiculo</th>
+                                                                <th>Dirección</th>
                                                             </tr>
                                                         </thead>
                                                     </table>
@@ -293,11 +278,11 @@
             <!-- /.container-fluid -->
 
         </div>
-            <!-- End of Main Content -->
+        <!-- End of Main Content -->
 
 
-        </div>
-        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Content Wrapper -->
     </div>
     <!-- End of
         Wrapper -->
@@ -322,6 +307,9 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
+    <script src="../Comunes/Combos.js"></script>
+    <script src="../Comunes/Grids.js"></script>
+    <script src="../Paginas/Scripts/Empleados.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>
@@ -329,10 +317,6 @@
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/jquery.dataTables.min.js"></script>
     <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
-    <script src="../Comunes/Combos.js"></script>
-    <script src="../Comunes/Grids.js"></script>
-    <script src="../Paginas/Scripts/Cliente.js"></script>
 </body>
-
 
 </html>
