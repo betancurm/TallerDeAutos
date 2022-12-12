@@ -19,55 +19,11 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    
+
 </head>
                                    
-<script type="text/javascript">
-    (function (d, t, e, m) {
 
-        // Async Rating-Widget initialization.
-        window.RW_Async_Init = function () {
-
-            RW.init({
-                huid: "487836",
-                uid: "87ba53157679fd56ef646def218ee7e5",
-                source: "website",
-                options: {
-                    "advanced": {
-                        "layout": {
-                            "align": {
-                                "hor": "center",
-                                "ver": "top"
-                            },
-                            "lineHeight": "32px",
-                            "dir": "rtl"
-                        },
-                        "font": {
-                            "size": "24px",
-                            "bold": true,
-                            "italic": true,
-                            "type": "\"Droid Sans\", Helvetica, sans-serif"
-                        }
-                    },
-                    "size": "large",
-                    "lng": "es",
-                    "style": "oxygen",
-                    "isDummy": false
-                }
-            });
-            RW.render();
-        };
-        // Append Rating-Widget JavaScript library.
-        var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
-            l = d.location, ck = "Y" + t.getFullYear() +
-                "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
-            f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
-            a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
-        if (d.getElementById(id)) return;
-        rw = d.createElement(e);
-        rw.id = id; rw.async = true; rw.type = "text/javascript";
-        rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
-        s.parentNode.insertBefore(rw, s);
-    }(document, new Date(), "script", "rating-widget.com/"));</script>
 <body id="page-top">
     <diiv id="wrapper">
         <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -150,17 +106,99 @@
             <div id="content">
                 <section class="content">
                     <div class="container-fluid">
-                        <div class="row" style="color:black">
+                        <div class="row" style="color:#ffd800">
                             <div class="col-md-12">
                                 <div class="card card-primary">
                                     <div class="card-header">
                                         <h3 class="card-title">CALIFICACIÓN DEL SERVICIO</h3>
                                     </div>
-
-Z                              <div class="rw-ui-container"></div>
-
                                 </div>
-                           
+                                <div class="star-widget" style="text-align:center">
+                                    <input type="radio" name="rate" id="rate-5" />
+                                    <label for="rate-5" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-4" />
+                                    <label for="rate-4" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-3" />
+                                    <label for="rate-3" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-2" />
+                                    <label for="rate-2" class="fas fa-star"></label>
+                                    <input type="radio" name="rate" id="rate-1" />
+                                    <label for="rate-1" class="fas fa-star"></label>
+                                </div>
+                                <form id="frmRegistroVehiculo">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboCliente">Cliente</label>
+                                                    <select id="cboCliente" class="form-control select2" style="width: 100%;" onchange="LlenarComboVehiculo(0)">
+                                                        <option value="0">Seleccione un Cliente</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="cboCliente">Empleado</label>
+                                                    <select id="cboCliente" class="form-control select2" style="width: 100%;" onchange="LlenarComboVehiculo(0)">
+                                                        <option value="0">Seleccione un Empleado</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label for="txtFechaSalida">Fecha</label>
+                                                    <input type="date" class="form-control" id="txtFechaSalida" placeholder="Fecha Salida">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="txtDescripcionRecepcion">Comentarios </label>
+                                                    <textarea id="txtDescripcionRecepcion" class="form-control" rows="2" placeholder="Descripción de daños"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="button" id="btnInsertar" class="btn-block btn-lg btn-dark" style="color:yellow">Insertar</button>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button type="button" id="btnCancelar" class="btn-block btn-lg btn-danger">CANCELAR</button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="card shadow mb-4" style="color:black">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-dark">Calificaciones</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table id="tblCalificaciones" class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="color:black">
+                                                    <thead>
+                                                        <tr>
+                                                            <!--<th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Primer Apellido</th>
+                                    <th>Segundo Apellido</th>
+                                    <th>Documento</th>
+                                    <th>Tipo de Documento</th>
+                                    <th>Telefono</th>
+                                    <th>Correo</th>
+                                    <th>Marca Vehiculo</th>
+                                    <th>Placa Vehiculo</th>-->
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                            </form>
 
 
                             <div class="card-footer">
